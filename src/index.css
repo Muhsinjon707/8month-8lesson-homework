@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer component {
+  .basket {
+    position: relative;
+  }
+
+  .inner-basket {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    right: 0;
+    width: 450px;
+    min-height: 300px;
+    height: auto;
+    background-color: white;
+    box-shadow: 4px 4px 4px black;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 5px 6px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .basket:hover .inner-basket {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 1030px) {
+    .container {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 770px) {
+    .custom-contact {
+      flex-direction: column;
+    }
+  }
+}
