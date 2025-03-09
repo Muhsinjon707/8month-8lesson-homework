@@ -96,6 +96,9 @@ function Header() {
                       </div>
                     );
                   })}
+                {
+                  cartItems.length === 0 && <p>No elements are purchased...</p>
+                }
               </div>
               <div className="py-4 bg-gray-400 w-full flex items-center justify-center">
                 <button
